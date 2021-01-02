@@ -1,4 +1,2 @@
-from selenium import webdriver
-driver = webdriver.Firefox()
-
-driver.get("https://selenium.dev")
+PATH = "/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
+export PATH
