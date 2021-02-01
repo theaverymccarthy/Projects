@@ -1,2 +1,37 @@
-PATH = "/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
-export PATH
+import pytest
+from selenium import webdriver
+import sys
+from selenium.webdriver.common import service
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.common.keys import Keys
+from time import sleep
+
+
+
+wantFree = input("Want free? Y/N ")
+whatWant = input("What you want? ")
+browser = webdriver.Firefox()
+
+if wantFree == "Y":
+    
+        browser.get('https://losangeles.craigslist.org/search/sfv/zip?')
+        
+        searchForm = browser.find_element_by_id("query")
+        searchForm.click()
+        
+        searchForm.send_keys(whatWant)
+        sendClick = browser.find_element_by_class_name("searchbtn")
+        sendClick.click()
+    
+else:
+    
+        browser.get('https://losangeles.craigslist.org/search/sfv/sss?')
+
+        searchForm = browser.find_element_by_id("query")
+        searchForm.click()
+        
+        searchForm.send_keys(whatWant)
+        sendClick = browser.find_element_by_class_name("searchbtn")
+        sendClick.click()
+
+    
