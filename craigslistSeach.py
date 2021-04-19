@@ -5,6 +5,7 @@ from selenium.webdriver.common import service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.keys import Keys
 from time import sleep
+import csv
 
 
 
@@ -35,3 +36,4 @@ else:
         sendClick.click()
 
     
+https://docs.google.com/spreadsheets/d/1YYoTUyEtcjl9GmSHc3pOcPs8myI8n3pzB0AggDCIJ2I/edit?usp=sharing
