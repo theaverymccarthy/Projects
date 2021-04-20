@@ -23,7 +23,9 @@ if wantFree == "Y":
         searchForm.send_keys(whatWant)
         sendClick = browser.find_element_by_class_name("searchbtn")
         sendClick.click()
-    
+
+        
+
 else:
     
         browser.get('https://losangeles.craigslist.org/search/sfv/sss?')
@@ -35,5 +37,7 @@ else:
         sendClick = browser.find_element_by_class_name("searchbtn")
         sendClick.click()
 
-    
-https://docs.google.com/spreadsheets/d/1YYoTUyEtcjl9GmSHc3pOcPs8myI8n3pzB0AggDCIJ2I/edit?usp=sharing
+        ulSelector = browser.find_element_by_class_name("rows")
+        liClass = ulSelector.find_elements_by_tag_name("li")
+        for links in liClass:
+                print(links.find_element_by_xpath('./a').get_attribute('href'))
