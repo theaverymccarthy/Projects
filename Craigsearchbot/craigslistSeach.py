@@ -1,3 +1,4 @@
+from os import link
 import pytest
 from selenium import webdriver
 import sys
@@ -6,6 +7,7 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 import csv
+import pandas as pd
 
 
 
@@ -39,5 +41,10 @@ else:
 
         ulSelector = browser.find_element_by_class_name("rows")
         liClass = ulSelector.find_elements_by_tag_name("li")
-        for links in liClass:
-                print(links.find_element_by_xpath('./a').get_attribute('href'))
+        with open('craigsheet.csv', 'w', newline='') as file:
+                for links in liClass:
+                        linkyLinks = [links.find_element_by_xpath('./a').get_attribute('href')]
+                        print(linkyLinks)
+                        
+                        mywriter = csv.writer(file, delimiter=' ')
+                        mywriter.writerows(linkyLinks)
