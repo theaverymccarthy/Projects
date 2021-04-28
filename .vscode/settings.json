@@ -1,3 +1,8 @@
 {
+<<<<<<< HEAD
     "python.pythonPath": "F:\\Applications\\Anaconda\\python.exe"
+=======
+    "python.pythonPath": "/Users/iwe/opt/anaconda3/bin/python"
+    "auto-close-tag.enableAutoCloseTag": true
+>>>>>>> dc6afc7343d06e30931b7d9338d3b47010524eb5
 }
