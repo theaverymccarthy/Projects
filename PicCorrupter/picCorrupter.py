@@ -1,16 +1,22 @@
-import opencv
+import cv2
 import numpy as np
 import skimage
+import PIL
+from PIL import Image
+import time
 
-def picDiff(unFucked, preFucked):
-    image1 = cv2.imread(preFucked)
-    image2 = cv2.imread(unFucked)
-    difference = cv2.subtract(image1, image2)
-    Conv_hsv_Gray = cv2.cvtColor(difference, cv2.COLOR_BGR2GRAY)
-    ret, mask = cv2.threshold(Conv_hsv_Gray, 0, 255,cv2.THRESH_BINARY_INV |cv2.THRESH_OTSU)
-    difference[mask != 255] = [0, 0, 255]
-    image1[mask != 255] = [0, 0, 255]
-    image2[mask != 255] = [0, 0, 255]
-    cv2.imwrite('difference_img/diff_image_' + str(cnt) + '.png', image1) 
+pic2 = Image.open(r'F:\Documents\projects\PicCorrupter\fuk1.png').convert('RGB')
+pic1 = Image.open(r'F:\Documents\projects\PicCorrupter\fuk2.png').convert('RGB')
+subt = PIL.ImageChops.subtract(pic1, pic2, scale=.5, offset=0)
+subt.show()
 
-picDiff(zerk.jpg, zerk2.jpg)
+zerk = Image.open(r'F:\Documents\projects\PicCorrupter\zerk.jpg')
+zerk2 = Image.open(r'F:\Documents\projects\PicCorrupter\zerk2.jpg')
+blend = PIL.ImageChops.subtract(zerk, zerk2)
+blend.show()
+
+
+img = cv2.imread('/Documents/projects/PicCorrupter/fuk1.jpg', 0)
+cv2.imshow('ddd', img)
+cv2.waitKey(2000)
+cv2.destroyAllWindows()
