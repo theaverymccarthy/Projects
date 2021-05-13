@@ -1,25 +1,19 @@
 from os import link
-import pytest
+
 from selenium import webdriver
 from selenium.webdriver.common import service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 import csv
-import pandas as pd
 import tkinter as tk
 
-window = tk.Tk()
-label = tk.Label(text="What items do you want?")
-entry = tk.Entry()
-label.pack()
-entry.pack()
+from Craigsearchbot.interface import interface
 
-item = entry.get()
-window.mainloop()
-print (item)
+
 
 wantFree = input("Want free? Y/N ")
+interface()
 whatWant = input("What you want? ")
 browser = webdriver.Firefox()
 
