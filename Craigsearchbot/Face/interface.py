@@ -6,15 +6,11 @@ def interface():
     root.title("Sir Craigulon searcher of lists")
     wants = []
     
-    def Take_input():
+    def takeInput():
         INPUT = inputtxt.get("1.0", "end-1c")
-        Output.insert(0,INPUT)
-        Output.insert(0,", ")
+        Output.insert(0,INPUT + " ")
         wants.append(INPUT)
         inputtxt.delete("1.0", END)
-        
-    
-        
         
     l = Label(text = "What is it you wish to search for peasant?")
     inputtxt = Text(
@@ -34,7 +30,7 @@ def interface():
         root, height = 2,
         width = 20, 
         text ="Log Desire",
-        command = lambda:Take_input()
+        command = lambda:takeInput()
         )
                     
 
