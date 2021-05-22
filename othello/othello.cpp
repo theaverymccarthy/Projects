@@ -1,15 +1,10 @@
 #include <iostream>
 using namespace std;
 
-char gameBoard[8][8] = {{'#','#','#','#','#','#','#'},{'#','#','#','#','#','#','#'},{'#','#','#','#','#','#','#'},{'#','#','#','X','*','#','#'},{'#','#','*','X','#','#','#'},{'#','#','#','#','#','#','#'},{'#','#','#','#','#','#','#'},{'#','#','#','#','#','#','#'}};
-int cursor[8] = {4,4}; 
+char gameBoard[9][9] = {{'#','#','#','#','#','#','#','#'},{'#','#','#','#','#','#','#'},{'#','#','#','#','#','#','#'},{'#','#','X','*','#','#','#'},{'#','#','#','*','X','#','#'},{'#','#','#','#','#','#','#'},{'#','#','#','#','#','#','#'},{'#','#','#','#','#','#','#'}};
+int cursor[8] = {0,0}; 
 
-// print gameboard with starting position
-// print cursors position
-// update map on enter press
-// validate legal moves
-// update gameboard piece swithces
-// switch turns
+
 
     
 int main()
@@ -24,12 +19,12 @@ int main()
             }
             else
             {
-                cout << gameBoard[i][j];
+                cout << gameBoard[j][i] << " ";
             }
-            cout << endl;
+            
         }
         cout << endl;
     }
-    
+    return 0;
 
 }

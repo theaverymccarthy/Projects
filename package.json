@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "conda": "*",
-    "livereload": "^0.9.3",
-    "pip": "^0.0.1"
-  }
-}
