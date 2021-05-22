@@ -5,8 +5,8 @@ import PIL
 from PIL import Image
 import time
 
-pic2 = Image.open(r'F:\Documents\projects\PicCorrupter\fuk1.png').convert('RGB')
-pic1 = Image.open(r'F:\Documents\projects\PicCorrupter\fuk2.png').convert('RGB')
+pic2 = Image.open(r'F:\Documents\projects\PicCorrupter\pic1.png').convert('RGB')
+pic1 = Image.open(r'F:\Documents\projects\PicCorrupter\pic2.png').convert('RGB')
 subt = PIL.ImageChops.subtract(pic1, pic2, scale=.5, offset=0)
 subt.show()
 
